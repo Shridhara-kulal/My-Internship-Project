@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shridhara - Portfolio</title>
+    <script src="https://kit.fontawesome.com/9c2d299bf4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <h1><b><span>S</span>hridhara.</b></h1>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Student, CS Engineer</p>
+            <h1>Hi, I'm <span>Shridhara</span><br>From Kundapura</h1>
+        </div>
+    </div>
+</div>
+<!------about------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <div class="card">
+                    <div class="card-inner">
+                        <img src="images/background.png" alt="Background Image">
+                        <div class="back-text">
+                            <p><i>"Running away from any problem only increases the distnce from the solution.The easiest way to escape from a problem is to solve it"</i> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> Hi, I'm Shridhara. I am currently in my 3rd year of Bachelor of Engineering (BE) with a major in Computer Science and Engineering (CSE) at St. Joseph Engineering College in Vamanjoor, Mangalore.</p>
+                <p>My ambition is to become a web developer. I have a passion for creating beautiful and functional websites. I'm enthusiastic about learning web development technologies and frameworks, and I'm actively working on building my skills in HTML, CSS, JavaScript, and more.</p>
+                <p>With a strong foundation in computer science and a desire to craft engaging online experiences, I am excited about the opportunities to learn, grow, and make a positive impact in the web development field.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" data-tab="skills">Skills</p>
+                    <p class="tab-links" data-tab="education">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>Communication</span><br>Kannada, English</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2019</span><br>SSLC from KPS Bidkalkatte</li>
+                        <li><span>2021</span><br>PUC from Govt. PU College Kundapura</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------ portfolio ------>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.jpg">
+                <div class="layer">
+                    <h2>Thermal Analysis of Disk Brake using Ansys</h2>
+                    <p>It enables engineers to evaluate the impact of temperature on brake performance, ensuring that the brake components remain within safe operating limits and optimizing their design for efficiency and longevity.</p>
+                    <a href="images/project1 (1).pdf" download class="bttn">Download</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.jpg">
+                <div class="layer">
+                    <h2>Library Management System</h2>
+                    <p>It provides a user-friendly interface with features for adding books and retrieving user information, aiding in library administration.</p>
+                    <a href="images/project2(2).pdf" download class="bttn">Download</a>
+                </div>
+            </div>
+            
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<!------- contact ------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>hornadi.shridharakulal@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>7795061027</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/shridharakulal18"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/shridhara-kulal-853609295"><i class="fa-brands fa-linkedin"></i></a>
+
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2023 Shridhara. All rights reserved.</p>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+for (var i = 0; i < tablinks.length; i++) {
+    tablinks[i].addEventListener("click", function (event) {
+        for (var j = 0; j < tablinks.length; j++) {
+            tablinks[j].classList.remove("active-link");
+            tabcontents[j].classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        var tabName = event.currentTarget.getAttribute("data-tab");
+        document.getElementById(tabName).classList.add("active-tab");
+    });
+}
+
+</script>
+</body>
+</html>
